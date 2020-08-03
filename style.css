@@ -1,0 +1,270 @@
+body {
+    background: url(assets/bg.jpg);
+    background-size: cover;
+    font-family: "Oxanium";
+}
+
+/* Screen */
+
+.container-top {
+    margin: auto;
+    width: 450px;
+    height: 250px;
+    background-color: RGB(0,0,10);
+    position: relative;
+    top: 410px;
+    border-radius: 10px;
+    box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 1);
+    z-index: -1;
+}
+
+.screen-container {
+    margin: auto;
+    position: relative;
+    top: 30px;
+    width: 90%;
+    height: 80%;
+    background: url(assets/screen.jpg);
+    box-shadow: 0px 0px 5px 1px rgba(22, 100, 200, 0.5);
+}
+
+.history {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.3);
+    text-align: left;
+    font-size: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 5px;
+}
+
+.screen {
+    color: rgba(22, 100, 200, 1);
+    font-size: 50px;
+    text-align: right;
+    margin-top: 50px;
+    margin-right: 10px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+
+.container-bottom {
+    display: flex;    
+    background: url(assets/calc.jpg);
+    background-size: cover;
+    margin: auto;
+    margin-top: 400px; 
+    width: 800px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 300px;
+    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 1);
+}
+
+/* Add sub-divisions to bottom calculator. */
+
+.left-edge {
+    background-color: rgba(155,28,155,0);
+    position: relative;
+    left: 40px;
+    width: 10%;
+    height: 100%;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+}
+
+.center-left-container {
+    background-color: rgba(8,28,155,0);
+    width: 50%;
+    height: 100%;
+}
+
+.center-right-container {
+    background-color: rgba(8,128,5,0);
+    width: 25%;
+    height: 100%;
+}
+
+.right-edge {
+    background-color: rgba(118,128,5,0);
+    width: 10%;
+    height: 100%;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+}
+
+
+
+/* Numeric Buttons */
+
+.left-buttons {
+    display: grid;
+    margin: 50px 0px 0px 50px;
+    grid-template-columns: 110px 110px 110px;
+    grid-template-rows: 80px 80px 80px 80px;
+}
+
+.btncl{
+    width: 80px;
+    height: 60px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px 2px rgba(22, 100, 200, 1);
+    border-radius: 5px;
+    text-align: center;
+    background: inherit;
+    outline: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 40px;
+}
+
+
+
+/* Operators */ 
+
+.right-buttons {
+    display: grid;
+    margin: 50px 0px 0px 0px;
+    grid-template-columns: 110px 110px;
+    grid-template-rows: 80px 80px 80px 80px;
+    grid-template-areas: "a b"
+                         "c d"
+                         "e f"
+                         "e g";
+}
+
+.btncr{
+    width: 80px;
+    height: 60px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px 2px rgba(22, 100, 200, 1);
+    border-radius: 5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    outline: none;
+   
+}
+
+.plus-button {
+    height: 140px;
+    grid-area: e;
+}
+
+
+/* Button animations */ 
+
+.btn {
+    transition: all .07s ease;
+}
+
+.btn:active {
+    transform:  scale(0.9);
+}
+
+/* Left Edge Buttons */
+
+.left-edge-buttons {
+    display: grid;
+    grid-template-rows: 90px 60px 80px;
+    margin: 80px 0px 0px 20px;
+}
+
+.off-button {
+    background-color: RGB(12,50,150);
+    width: 50px;
+    height: 80px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 10px;
+    outline: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 2px 1px rgba(22, 100, 200, 1);
+
+}
+
+.ce-button {
+    background-color: RGB(12,50,150);
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    outline: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 2px 1px rgba(22, 100, 200, 1);
+}
+
+.on-button {
+    background-color: RGB(12,50,150);
+    width: 50px;
+    height: 80px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    outline: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 2px 1px rgba(22, 100, 200, 1);
+}
+
+/* Right Edge Buttons */ 
+
+
+.right-edge-buttons {
+    display: grid;
+    grid-template-rows: 90px 60px 80px;   
+    margin: 80px 0px 0px 20px;
+}
+
+.b1 {
+    background-color: RGB(12,50,150);
+    width: 50px;
+    height: 80px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 50px;
+    outline: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 2px 1px rgba(22, 100, 200, 1);
+}
+
+.b2 {
+    background-color: RGB(12,50,150);
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    outline: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 2px 1px rgba(22, 100, 200, 1);
+}
+
+.b3 {
+    background-color: RGB(12,50,150);
+    width: 50px;
+    height: 80px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    outline: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 2px 1px rgba(22, 100, 200, 1);
+    
+}
+
+
+
